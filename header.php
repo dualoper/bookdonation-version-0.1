@@ -76,7 +76,7 @@
 		<!-- search -->
 		<form class="form-inline" action="http://localhost/bookdonation/search/" method="get">
 			<input class="form-control badge-pill" type="search" name="search" placeholder="Book, Author or Category" id="search" <?php  if(isset($_GET['search'])) { echo $_GET['search'];} ?> aria-label="Search" size="50">
-			<button class="btn" type="submit" name="submit"><img src="http://localhost/bookdonation/links/image/search.png" alt="" class="rounded w3-hover-shadow"></button>
+			<button class="btn btn-sm" type="submit" name="submit"><img src="http://localhost/bookdonation/links/image/search.png" alt="" class="rounded w3-hover-shadow"></button>
 		</form>
 		
 
@@ -136,6 +136,11 @@
 				<li class="nav-item">
 					<a class="nav-link" href="http://localhost/bookdonation/cart/">
 						<img src="http://localhost/bookdonation/links/image/cart.png" width="50" alt="YOUR ORDER" class="w3-hover-shadow">
+						<?php 
+							if(isset($_SESSION['order'])){
+								echo '<sup class="badge bg-orange badge-pill" id="order_badge">'.$_SESSION['order'].'</sup>';
+							}
+						?>
 					</a>
 				</li>
 			</ul>

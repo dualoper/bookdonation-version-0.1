@@ -53,7 +53,7 @@
                                 }
                             }
                             else{
-                                echo '<a href="../#dropdownMenu2" class="btn btn-outline-success w3-hover-shadow">Login to Order</a>';
+                                echo '<a href="../#dropdownMenu2" class="btn btn-outline-danger w3-hover-shadow">Login to Order</a>';
                             }
                             echo '<p class="text-white">'.$row['description'].'</p>
                         </div>
@@ -68,6 +68,6 @@
     }
 ?>
 
-<div class="container"><a href="./?search=<?php echo $row['category']?>" class="btn btn-outline-success m-5 w3-hover-shadow">Find More Books</a></div>
+<div class="container"><a href="./?search=<?php echo $row['category']?>" class="btn btn-success badge-pill m-5 w3-hover-shadow">Find More Books</a></div>
 
 <?php include_once('../footer.php') ?>

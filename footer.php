@@ -1,14 +1,15 @@
-<div class="container-fluid bg-dark text-muted lead p-5" id="about" style="z-index: 50;">
-<img src="http://localhost/bookdonation/links/image/bd logo.png" alt="logo" class="w3-animate-fading">
-    <p>
-        Book Donation System is works towards making education available to all, across the geographical and social 
-        boundaries. Book Donation System will make this possible by providing free books to those who have the desire 
-        to read but lack of resources to buy. The main objective of developing this Book Donation System is to make the 
-        donation system for the NGO’s, Donor and Needy People easy, feasible and dynamic. This project is an effort to 
-        find out a way to find a suitable place i.e. an online platform where people who want to donate books can find 
-        places to donate and persons or libraries or any other institutions concerned who want to receive the donated 
-        books will be able to receive them.
-    </p>
+<div class="container-fluid  text-secondary lead px-5 py-2" id="about" style="background-color:black;">
+    <div class="row">
+        <img src="http://localhost/bookdonation/links/image/bd logo.png" alt="logo" class="w3-animate-fading col-xs-2">
+        <div class="col-md text-right">
+            <small>
+                MADE BY : Rahul Kumar (176415413)<br>
+                <img src="http://localhost/bookdonation/links/image/envelop white.png" alt="Cont : " width="20"> : rahulkumar.dillicantt@gmail.com <br class="d-sm-none">
+                <img src="http://localhost/bookdonation/links/image/phone.png" alt="Cont : " width="20"> : 8506976745
+            </small>
+        </div>
+    </div>
+    
 </div>
 
 <script src="http://localhost/bookdonation/links/js/popper.min.js"></script>

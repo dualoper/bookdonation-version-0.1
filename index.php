@@ -66,7 +66,7 @@
 </div>
 
 <!-- books  -->
-<div class="container-fluid">
+<div class="container">
 
     <!-- Education  -->
     <?php
@@ -74,24 +74,21 @@
         $result = select_by_category($cat);
         if(mysqli_num_rows($result)){
             echo '<a href="./search/?search=education" class="text-dark mt-5"><h2 class="shadow">Educational Books >></h2></a>
-                <div class="row px-5 pb-5 bookrow">';
+                <div class="row pb-5 bookrow">';
             while($row = mysqli_fetch_assoc($result)){
                 echo'<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                         <a href="./search/book.php?id='.$row['book_id'].'">
                             <div class="card bg-dark border-warning w3-hover-shadow my-2">
-                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="220">
-                                <div class="card-body">
+                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="200">
                                     <p class="px-2 bg-danger text-white bg-success" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px; position: absolute;right: -10px; top:5px;">'.$row['category'].'</p>
-                                    <h4 class="card-title text-warning text-truncate">'.ucwords($row['book_name']).'</h4>';
+                                    <h4 class="card-title text-warning text-truncate px-2">'.ucwords($row['book_name']).'</h4>';
                                     if(isset($_SESSION['email'])){
                                         echo '<a href="./cart/?id='.$row['book_id'].'" class="btn btn-success btn-sm">Add to Cart</a>';
                                     }
                                     else{
                                         echo '<a href="./#dropdownMenu2" class="btn btn-outline-danger btn-sm">Login to Order</a>';
-                                    }
-                                
-                                echo '</div>
-                            </div>
+                                    }                    
+                    echo '</div>
                         </a>
                     </div>';
             }
@@ -105,24 +102,21 @@
         $result = select_by_category($cat);
         if(mysqli_num_rows($result)){
             echo '<a href="./search/?search=novel" class="text-dark mt-5"><h2  class="shadow">Novels >></h2></a>
-                <div class="row px-5  pb-5 bookrow">';
+            <div class="row pb-5 bookrow">';
             while($row = mysqli_fetch_assoc($result)){
                 echo'<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                         <a href="./search/book.php?id='.$row['book_id'].'">
                             <div class="card bg-dark border-warning w3-hover-shadow my-2">
-                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="220">
-                                <div class="card-body">
+                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="200">
                                     <p class="px-2 bg-danger text-white bg-success" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px; position: absolute;right: -10px; top:5px;">'.$row['category'].'</p>
-                                    <h4 class="card-title text-warning text-truncate">'.ucwords($row['book_name']).'</h4>';
+                                    <h4 class="card-title text-warning text-truncate px-2">'.ucwords($row['book_name']).'</h4>';
                                     if(isset($_SESSION['email'])){
                                         echo '<a href="./cart/?id='.$row['book_id'].'" class="btn btn-success btn-sm">Add to Cart</a>';
                                     }
                                     else{
                                         echo '<a href="./#dropdownMenu2" class="btn btn-outline-danger btn-sm">Login to Order</a>';
-                                    }
-                                
-                                echo '</div>
-                            </div>
+                                    }                    
+                    echo '</div>
                         </a>
                     </div>';
             }
@@ -136,24 +130,21 @@
         $result = select_by_category($cat);
         if(mysqli_num_rows($result)){
             echo '<a href="./search/?search=magazine" class="text-dark mt-5"><h2 class="shadow">Magazines >></h2></a>
-                <div class="row px-5 pb-5 bookrow">';
+            <div class="row pb-5 bookrow">';
             while($row = mysqli_fetch_assoc($result)){
                 echo'<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                         <a href="./search/book.php?id='.$row['book_id'].'">
                             <div class="card bg-dark border-warning w3-hover-shadow my-2">
-                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="220">
-                                <div class="card-body">
+                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="200">
                                     <p class="px-2 bg-danger text-white bg-success" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px; position: absolute;right: -10px; top:5px;">'.$row['category'].'</p>
-                                    <h4 class="card-title text-warning text-truncate">'.ucwords($row['book_name']).'</h4>';
+                                    <h4 class="card-title text-warning text-truncate px-2">'.ucwords($row['book_name']).'</h4>';
                                     if(isset($_SESSION['email'])){
                                         echo '<a href="./cart/?id='.$row['book_id'].'" class="btn btn-success btn-sm">Add to Cart</a>';
                                     }
                                     else{
                                         echo '<a href="./#dropdownMenu2" class="btn btn-outline-danger btn-sm">Login to Order</a>';
-                                    }
-                                
-                                echo '</div>
-                            </div>
+                                    }                    
+                    echo '</div>
                         </a>
                     </div>';
             }
@@ -167,24 +158,21 @@
         $result = select_by_category($cat);
         if(mysqli_num_rows($result)){
             echo '<a href="./search/?search=story book" class="text-dark mt-5"><h2 class="shadow">Story Books >></h2></a>
-                <div class="row px-5 pb-5 bookrow">';
+            <div class="row pb-5 bookrow">';
             while($row = mysqli_fetch_assoc($result)){
                 echo'<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                         <a href="./search/book.php?id='.$row['book_id'].'">
                             <div class="card bg-dark border-warning w3-hover-shadow my-2">
-                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="220">
-                                <div class="card-body">
+                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="200">
                                     <p class="px-2 bg-danger text-white bg-success" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px; position: absolute;right: -10px; top:5px;">'.$row['category'].'</p>
-                                    <h4 class="card-title text-warning text-truncate">'.ucwords($row['book_name']).'</h4>';
+                                    <h4 class="card-title text-warning text-truncate px-2">'.ucwords($row['book_name']).'</h4>';
                                     if(isset($_SESSION['email'])){
                                         echo '<a href="./cart/?id='.$row['book_id'].'" class="btn btn-success btn-sm">Add to Cart</a>';
                                     }
                                     else{
                                         echo '<a href="./#dropdownMenu2" class="btn btn-outline-danger btn-sm">Login to Order</a>';
-                                    }
-                                
-                                echo '</div>
-                            </div>
+                                    }                    
+                    echo '</div>
                         </a>
                     </div>';
             }
@@ -198,24 +186,21 @@
         $result = select_by_category($cat);
         if(mysqli_num_rows($result)){
             echo '<a href="./search/?search=others" class="text-dark mt-5"><h2 class="shadow">Other Books >></h2></a>
-                <div class="row px-5 pb-5 bookrow">';
+            <div class="row pb-5 bookrow">';
             while($row = mysqli_fetch_assoc($result)){
                 echo'<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                         <a href="./search/book.php?id='.$row['book_id'].'">
                             <div class="card bg-dark border-warning w3-hover-shadow my-2">
-                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="220">
-                                <div class="card-body">
+                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="200">
                                     <p class="px-2 bg-danger text-white bg-success" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px; position: absolute;right: -10px; top:5px;">'.$row['category'].'</p>
-                                    <h4 class="card-title text-warning text-truncate">'.ucwords($row['book_name']).'</h4>';
+                                    <h4 class="card-title text-warning text-truncate px-2">'.ucwords($row['book_name']).'</h4>';
                                     if(isset($_SESSION['email'])){
                                         echo '<a href="./cart/?id='.$row['book_id'].'" class="btn btn-success btn-sm">Add to Cart</a>';
                                     }
                                     else{
                                         echo '<a href="./#dropdownMenu2" class="btn btn-outline-danger btn-sm">Login to Order</a>';
-                                    }
-                                
-                                echo '</div>
-                            </div>
+                                    }                    
+                    echo '</div>
                         </a>
                     </div>';
             }

@@ -35,7 +35,6 @@
                 $desc = $_REQUEST['description'];
                 $bk = $_SESSION['order'];
 
-
                 $sqlb = "INSERT INTO `bills` (`cart_id`, `user_id`, `order_date`, `order_time`, `phone`, `address`, `state`, `pin`, `books`, `description`) VALUES ('".$cid."', '".$uid."', '".$date."', '".$time."', '".$ph."', '".$add."', '".$st."', '".$pin."', '".$bk."', '".$desc."')";
 
                 if(mysqli_query($conn,$sqlb)){

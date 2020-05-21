@@ -10,7 +10,14 @@
     0%   {left:0px; top:-10px;}
     50%  {left:0px; top:10px;}
     100% {left:0px; top:-10px;}
-  }
+}
+
+#order_badge{
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: fading;
+}
+
 #accindx{
     background-image: url('../image/children slate.jpg');
     background-attachment: fixed;
