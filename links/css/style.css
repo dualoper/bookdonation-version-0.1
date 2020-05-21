@@ -1,0 +1,148 @@
+/* .bdr { border: 3px dotted red; border-radius: 20px; margin:2rem auto; width:60rem; text-align: center; padding: 1.5rem}
+		table {border: 2px dotted blue; width: 80rem; margin: 1.5rem auto;padding: 0.8rem;}
+        table tr td {border: 1px dotted green; padding: 0.5rem;}
+         */
+         /* #signin {
+      
+            display: none;
+            transition: 2.3s;
+        }       
+         #signup {
+             */
+            /* display: none; */
+            /* transition: 2.3s;
+        }   
+         */
+
+
+#accindx{
+    background-image: url('../image/children slate.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bookrow a:hover{
+    text-decoration: none;
+}
+
+#filterdiv{
+    background-image: linear-gradient(90deg, rgb(0, 0, 0), rgba(197, 65, 4, 0));
+}
+
+#donateindx{
+    background-image: url('../image/donate book.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#carousel1{
+    border: 15px double rgb(63, 4, 4);
+    height: 20rem;
+    background-image: linear-gradient(rgb(92, 250, 184), orange);
+}
+
+#carousel2{
+    background-image: url('../image/carousel 2.jpg');
+    background-size: cover;
+    height: 20rem;
+}
+
+#carousel3{
+    background-image: url('../image/carousel 3.png');
+    background-size: cover;
+    height: 20rem;
+}
+
+/* #earth{
+    background-image: url('../image/earth.gif');
+} */
+
+.bg-orange{
+    /* background: linear-gradient(45deg, #880101, #ff7c01); */
+    background-image: linear-gradient(45deg, rgb(141, 3, 3,1), rgb(255, 94, 0,0.8));
+}
+
+.bg-black{
+    background-image: linear-gradient(145deg, rgba(34, 32, 48, 0.082), rgba(14, 14, 15, 0.89));
+}
+
+.bg-black-ltor{
+    background-image: linear-gradient(145deg, rgba(14, 14, 15, 0.89), rgba(34, 32, 48, 0.082));
+}
+
+.trans-2{
+    transition: 2s;
+}
+
+.shadow-blue{
+    box-shadow: 0 0 20px 5px #0202a1;
+}
+
+.text-orange{
+    color: rgb(255, 145, 0);
+}
+
+
+/* 
+.search {
+    border: 1px solid green;
+    background: green;
+    box-shadow: 0 2px 5px 2px rgb(4, 238, 4);
+    padding: 35px 21px;
+    border-radius: 38px;
+}        
+
+   
+.branchs table {
+    width:100%;
+    margin: 0 auto;
+}
+.branchs table tr th {
+    text-align: center;
+    font-weight: 700;
+    font-size: 19px;
+}
+.branchs table tr td {
+    text-align: center;
+    font-size: 17px;
+}
+.branchs table tr {
+    margin: 10px 0;
+    height: 70px;
+    transition: 0.6s;
+}
+.branchs table tr:hover {
+    background: #06963191;
+    box-shadow:0 4px 15px 5px #32a18980;
+    transition: 0.6s;
+}
+
+.btn-donar {
+    padding: 5rem 3rem;
+    background: green;
+    border-radius: 26px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.add-form {
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    padding: 2rem;
+    background: linear-gradient(45deg, #43bf34bf, #32a18980);
+    box-shadow: 0 4px 15px 5px #0a8419;
+} */
+
+/* .account-from {
+    width:60%;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    padding: 6rem 3rem;
+    background: linear-gradient(45deg, #43bf34bf, #32a18980);
+    box-shadow: 0 4px 15px 5px #0a8419;
+} */
+.ptr-auto {
+    cursor:auto!important;
+}
