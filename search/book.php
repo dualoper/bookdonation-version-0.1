@@ -38,8 +38,8 @@
                     <div class="row">
                         <img src="../links/path/books/'.$row['book_image'].'" alt="Book Image" class="img-fluid col-md-4 w3-hover-shadow">
                         <div class="col-md-6 p-5 w3-animate-left" style="height: 500px;">
-                            <h1 class="font-weight-bold text-dark w3-hover-shadow">'.ucwords($row['book_name']).' <small><sub>'.$row['year'].'</sub></small></h1>
-                            <h3 class="font-weight-bold text-dark">'.$row['category'].'</h3>
+                            <h1 class="font-weight-bold text-dark text-outline">'.ucwords($row['book_name']).'</h1>
+                            <h3 class="font-weight-bold text-dark">'.$row['category'].' <small><sub>'.$row['year'].'</sub></small></h3>
                             <h3>'.$row['subject'].' '.$row['class'].'</h3>
                             <h5 class="text-warning">Donated By : '.ucwords($user).'</h5>
                             <p class="small">Available : '.$row['remains'].' | Book Condition : '.$row['book_condition'].' | Pages : '.$row['page'].'</p>';

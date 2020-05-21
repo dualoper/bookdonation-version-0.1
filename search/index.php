@@ -116,15 +116,15 @@
         $total = mysqli_num_rows($result);
         echo '<img src="../links/image/fall books.gif" alt="books" class="img-fluid ml-5" width="30">';
         
-        echo '<div class="container px-5">
+        echo '<div class="container px-5 w3-animate-zoom">
                 <div class="row" id="bookdiv">';
         while($row = mysqli_fetch_assoc($result)){
             echo '<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 bookrow">
                     <a href="./book.php?id='.$row['book_id'].'">
                         <div class="card bg-dark border-warning w3-hover-shadow my-4">
-                            <img src="../links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="175">
-                            <h6 class="card-title text-warning text-truncate mx-1">'.ucwords($row['book_name']).'</h6>
-                            <small class="card-subtitle text-muted mx-2">'.$row['category'].' '.$row['class'].'</small>';
+                            <img src="../links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="160">
+                            <small class="px-2 bg-danger text-white bg-success" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px; position: absolute;right: -5px; top:2px;">'.$row['category'].'</small>
+                            <h6 class="card-title text-warning text-truncate mx-1">'.ucwords($row['book_name']).'</h6>';
                             if(isset($_SESSION['email'])){
                                 echo '<a href="../cart/?id='.$row['book_id'].'" class="btn btn-success btn-sm">Add to Cart</a>';
                             }

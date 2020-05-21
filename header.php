@@ -71,11 +71,11 @@
 	<nav class="navbar navbar-expand-lg shadow bg-dark font-weight-bold" style="position:sticky; top:0px; z-index: 2;">
 	
 		<!-- logo  -->
-		<a class="navbar-brand w3-animate-top" href="http://localhost/bookdonation/"><img src="http://localhost/bookdonation/links/image/bd logo.png" alt="logo"></a>
+		<a class="navbar-brand" href="http://localhost/bookdonation/"><img src="http://localhost/bookdonation/links/image/bd logo.png" alt="logo" id="logo"></a>
 		
 		<!-- search -->
 		<form class="form-inline" action="http://localhost/bookdonation/search/" method="get">
-			<input class="form-control" type="search" name="search" placeholder="Book, Author or Category" id="search" <?php  if(isset($_GET['search'])) { echo $_GET['search'];} ?> aria-label="Search" size="50">
+			<input class="form-control badge-pill" type="search" name="search" placeholder="Book, Author or Category" id="search" <?php  if(isset($_GET['search'])) { echo $_GET['search'];} ?> aria-label="Search" size="50">
 			<button class="btn" type="submit" name="submit"><img src="http://localhost/bookdonation/links/image/search.png" alt="" class="rounded w3-hover-shadow"></button>
 		</form>
 		
@@ -88,9 +88,9 @@
 		<!-- menu  -->
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto float-right text-right">
-				<li class="nav-item"><a class="nav-link text-orange w3-hover-shadow" href="http://localhost/bookdonation/">HOME</a></li>
-				<li class="nav-item"><a class="nav-link text-orange w3-hover-shadow" href="http://localhost/bookdonation/donate/#book">DONATE</a></li>
-				<li class="nav-item"><a class="nav-link text-orange w3-hover-shadow" href="#about">ABOUT US</a></li>
+				<li class="nav-item"><a class="nav-link text-orange w3-hover-shadow badge-pill" href="http://localhost/bookdonation/">HOME</a></li>
+				<li class="nav-item"><a class="nav-link text-orange w3-hover-shadow badge-pill" href="http://localhost/bookdonation/donate/#book">DONATE</a></li>
+				<li class="nav-item"><a class="nav-link text-orange w3-hover-shadow badge-pill" href="#about">ABOUT US</a></li>
 
 				<!-- login logout  -->
 				<?php
@@ -114,18 +114,15 @@
 					// logged out 
 					else {
 						echo '<li class="nav-item dropdown">
-                				<a class="nav-link text-orange dropdown-toggle  w3-hover-shadow" href="#" id="dropdownMenu2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                				<a class="nav-link text-orange dropdown-toggle badge-pill w3-hover-shadow" href="#" id="dropdownMenu2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       				LOGIN / SIGNUP
 								</a>
                     				<div class="dropdown-menu bg-dark px-2 pb-3" aria-labelledby="dropdownMenu2" style="width:250px";>
                         				<form action="" method="post">
                               				<input type="email" name="log_email" class="form-control my-2" id="exampleDropdownFormEmail1" placeholder="email@example.com">
-											<input type="password" name="log_pass" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-											<a class="text-primary" href="#">Forgot password?</a>										
+											<input type="password" name="log_pass" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">										
 											<div class="form-check py-2 text-orange">
-												<input type="checkbox" class="form-check-input" id="dropdownCheck">
-												<label class="form-check-label" for="dropdownCheck">Remember</label>
-												<button type="submit" class="btn btn-outline-danger text-orange shadow-lg font-weight-bold float-right" name="login">LOG IN</button>
+												<button type="submit" class="btn btn-outline-danger text-orange badge-pill shadow-lg font-weight-bold float-right" name="login">LOG IN</button>
                           					</div>                            					
 										</form>
 										<br>

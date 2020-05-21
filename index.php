@@ -79,10 +79,10 @@
                 echo'<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                         <a href="./search/book.php?id='.$row['book_id'].'">
                             <div class="card bg-dark border-warning w3-hover-shadow my-2">
-                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="200">
+                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="220">
                                 <div class="card-body">
-                                    <h4 class="card-title text-warning text-truncate">'.ucwords($row['book_name']).'</h4>
-                                    <h6 class="card-subtitle text-muted">'.$row['category'].' '.$row['class'].'</h6>';
+                                    <p class="px-2 bg-danger text-white bg-success" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px; position: absolute;right: -10px; top:5px;">'.$row['category'].'</p>
+                                    <h4 class="card-title text-warning text-truncate">'.ucwords($row['book_name']).'</h4>';
                                     if(isset($_SESSION['email'])){
                                         echo '<a href="./cart/?id='.$row['book_id'].'" class="btn btn-success btn-sm">Add to Cart</a>';
                                     }
@@ -110,10 +110,10 @@
                 echo'<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                         <a href="./search/book.php?id='.$row['book_id'].'">
                             <div class="card bg-dark border-warning w3-hover-shadow my-2">
-                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="200">
+                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="220">
                                 <div class="card-body">
-                                    <h4 class="card-title text-warning text-truncate">'.ucwords($row['book_name']).'</h4>
-                                    <h6 class="card-subtitle text-muted">'.$row['category'].' '.$row['class'].'</h6>';
+                                    <p class="px-2 bg-danger text-white bg-success" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px; position: absolute;right: -10px; top:5px;">'.$row['category'].'</p>
+                                    <h4 class="card-title text-warning text-truncate">'.ucwords($row['book_name']).'</h4>';
                                     if(isset($_SESSION['email'])){
                                         echo '<a href="./cart/?id='.$row['book_id'].'" class="btn btn-success btn-sm">Add to Cart</a>';
                                     }
@@ -141,10 +141,10 @@
                 echo'<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                         <a href="./search/book.php?id='.$row['book_id'].'">
                             <div class="card bg-dark border-warning w3-hover-shadow my-2">
-                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="200">
+                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="220">
                                 <div class="card-body">
-                                    <h4 class="card-title text-warning text-truncate">'.ucwords($row['book_name']).'</h4>
-                                    <h6 class="card-subtitle text-muted">'.$row['category'].' '.$row['class'].'</h6>';
+                                    <p class="px-2 bg-danger text-white bg-success" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px; position: absolute;right: -10px; top:5px;">'.$row['category'].'</p>
+                                    <h4 class="card-title text-warning text-truncate">'.ucwords($row['book_name']).'</h4>';
                                     if(isset($_SESSION['email'])){
                                         echo '<a href="./cart/?id='.$row['book_id'].'" class="btn btn-success btn-sm">Add to Cart</a>';
                                     }
@@ -172,10 +172,10 @@
                 echo'<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                         <a href="./search/book.php?id='.$row['book_id'].'">
                             <div class="card bg-dark border-warning w3-hover-shadow my-2">
-                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="200">
+                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="220">
                                 <div class="card-body">
-                                    <h4 class="card-title text-warning text-truncate">'.ucwords($row['book_name']).'</h4>
-                                    <h6 class="card-subtitle text-muted">'.$row['category'].' '.$row['class'].'</h6>';
+                                    <p class="px-2 bg-danger text-white bg-success" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px; position: absolute;right: -10px; top:5px;">'.$row['category'].'</p>
+                                    <h4 class="card-title text-warning text-truncate">'.ucwords($row['book_name']).'</h4>';
                                     if(isset($_SESSION['email'])){
                                         echo '<a href="./cart/?id='.$row['book_id'].'" class="btn btn-success btn-sm">Add to Cart</a>';
                                     }
@@ -203,10 +203,10 @@
                 echo'<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                         <a href="./search/book.php?id='.$row['book_id'].'">
                             <div class="card bg-dark border-warning w3-hover-shadow my-2">
-                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="200">
+                                <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="220">
                                 <div class="card-body">
-                                    <h4 class="card-title text-warning text-truncate">'.ucwords($row['book_name']).'</h4>
-                                    <h6 class="card-subtitle text-muted">'.$row['category'].' '.$row['class'].'</h6>';
+                                    <p class="px-2 bg-danger text-white bg-success" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px; position: absolute;right: -10px; top:5px;">'.$row['category'].'</p>
+                                    <h4 class="card-title text-warning text-truncate">'.ucwords($row['book_name']).'</h4>';
                                     if(isset($_SESSION['email'])){
                                         echo '<a href="./cart/?id='.$row['book_id'].'" class="btn btn-success btn-sm">Add to Cart</a>';
                                     }
