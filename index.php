@@ -18,51 +18,150 @@
 <div id="demo" class="carousel slide" data-ride="carousel">
 
     <!-- Indicators -->
-    <ul class="carousel-indicators" style="z-index: 1;">
+    <!-- <ul class="carousel-indicators" style="z-index: 1;">
         <li data-target="#demo" data-slide-to="0" class="active"></li>
         <li data-target="#demo" data-slide-to="1"></li>
         <li data-target="#demo" data-slide-to="2"></li>
-    </ul>
+    </ul> -->
 
     <!-- The slideshow -->
     <div class="carousel-inner">
-        <div class="carousel-item bg-light active px-5" id="carousel1">
-        <img src="http://localhost/bookdonation/links/image/carousel 1.jpg" alt="" class="float-right img-fluid mt-2" width="30%">
-            <p><span class="h1 text-success">WE MAKE A</span><span class="display-4"> LIVING</span><span class="text-success">BY</span></p>
-            <p><span class="text-danger display-3 font-weight-bold">WHAT WE GET</span><span class="text-dark h3"> BUT WE MAKE A</span><span class="display-4"> LIFE</span><span class="text-secondary">BY</span></p>
-            <p class="display-1 text-primary text-center font-weight-bold">WHAT WE GIVE</p>
-            <img src="http://localhost/bookdonation/links/image/carousel 1.jpg" alt="">
+        <div class="carousel-item bg-light active" id="carousel1">
         </div>
-        <div class="carousel-item" id="carousel2">
-        </div>
+        
+        <?php
+            $sql = "SELECT * FROM `books` WHERE `pickedup` = 'no' ORDER BY `book_id` DESC LIMIT 6";
+            $result = mysqli_query($conn,$sql);
+            if(mysqli_num_rows($result)>0){
+                echo '<div class="carousel-item" id="carousel2">
+                        <h3 class="text-warning">Upcoming Books . . . </h3>
+                        <div class="container">
+                            <div class="row pb-5 bookrow">';
+                            while($row = mysqli_fetch_assoc($result)){
+                                echo'<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                                        <div class="card bg-dark border-warning mb-5">
+                                            <img src="./links/path/books/'.$row['book_image'].'" alt="j" class="card-img-top" height="200">
+                                            <p class="px-2 bg-danger text-white bg-success" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px; position: absolute;right: -10px; top:5px;">'.$row['category'].'</p>
+                                            <h4 class="card-title text-warning text-truncate px-2">'.ucwords($row['book_name']).'</h4>
+                                        </div>
+                                    </div>';
+                            }
+                echo '</div>
+                    </div>
+                </div>';             
+            }
+        ?>
+        
         <div class="carousel-item" id="carousel3">
         </div>
     </div>
 
 </div>
 
-<!-- text black background -->
-<div class="container-fluid">
-    <div class="row my-5 py-5">
-        <div class="col-md-5 text-center">
-            <img src="./links/image/book balance.gif" alt="books" class="ml-5">
-        </div>
-        <div class="col-md-7 bg-black text-white p-5 text-justify w3-animate-left">
-            Books are sources of information from very early time. Still they are considered as a medium to spread education to the people. 
-            Form our childhood; we have started learning with the help of the books. As library professionals, the authors have seen many 
-            instances where people are interested to donate books to the libraries but the libraries where they are contacting are unable 
-            to receive the books due to their acquisition policies or may be due to lack of space.
+<div class="container text-white my-5">
+    <h1 class="font-weight-bold display-3 text-center" style="text-shadow: 2px 2px 10px black;">OUR PROCESS</h1>
+    <hr class="bg-dark w-25 m-auto pb-1">
+    <div class="row my-5">
+        <div class="col-md" style="border-left: 5px double blue;">
+            <h1 style="font-family: algerian;">Donate Books</h1>
+            <div class="media">
+                <img src="./links/image/plogin.png" alt="login" class="mr-3" width="50">
+                <div class="media-body">
+                    <h3>Login / Create an account</h3>
+                </div>
+            </div>
             <br>
-            Sometimes, many old books are sold at very less price to the persons who come home to receive used items. Many libraries also 
-            weed out books due to lack of space which are still in good condition. On the contrary, there are many instances, where people 
-            do not have money to procure books and many libraries also run out of budget and can’t procure books. Many people are interested 
-            in reading but due to lack of money they cannot read. Many NGOs are existing which runs programmes like Donate-A-Book. But under 
-            the programme, they collect money and with the money books are procured. But there should be some mechanism which will make use 
-            of the available books rather than procuring new books as a part of helping needy people. The donated money may be then used 
-            somewhere else for the development. This effort may also help to find out sources of donor who wants to donate text books of their 
-            children after they pass out to some needy students. 
+            <div class="media">
+                <img src="./links/image/pform.png" alt="login" class="mr-3" width="50">
+                <div class="media-body">
+                    <h3>Fill up the Form</h3>
+                </div>
+            </div>
+            <br>
+            <div class="media">
+                <img src="./links/image/pphone.png" alt="login" class="mr-3" width="50">
+                <div class="media-body">
+                    <h3>Our team will schedule pickup</h3>
+                </div>
+            </div>
+            <br>
+            <div class="media">
+                <img src="./links/image/pbook.png" alt="login" class="mr-3" width="50">
+                <div class="media-body">
+                    <h3>We collect books from your home</h3>
+                </div>
+            </div>
+            <br>
+            <div class="media">
+                <img src="./links/image/pselectbook.png" alt="login" class="mr-3" width="50">
+                <div class="media-body">
+                    <h3>We will update books available for seekers</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md"></div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-md"></div>
+        <div class="col-md" style="border-left: 5px double blue;">
+            <h1 style="font-family: algerian;">Order Books</h1>
+            <div class="media">
+                <img src="./links/image/plogin.png" alt="login" class="mr-3" width="50">
+                <div class="media-body">
+                    <h3>Login / Create an account</h3>
+                </div>
+            </div>
+            <br>
+            <div class="media">
+                <img src="./links/image/pselectbook.png" alt="login" class="mr-3" width="50">
+                <div class="media-body">
+                    <h3>Select Books and add to cart</h3>
+                </div>
+            </div>
+            <br>
+            <div class="media">
+                <img src="./links/image/pform.png" alt="login" class="mr-3" width="50">
+                <div class="media-body">
+                    <h3>Fill all details</h3>
+                </div>
+            </div>
+            <br>
+            <div class="media">
+                <img src="./links/image/pbookpack.png" alt="login" class="mr-3" width="64">
+                <div class="media-body">
+                    <h3>Our team will deliver the book or you will collect from our nearest NGO</h3>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+
+<div class="container-fluid text-white p-md-5 text-justify">
+    <p>
+        Books are sources of information from very early time. Still they are considered as a medium to spread education to the people. 
+        Form our childhood; we have started learning with the help of the books. As library professionals, the authors have seen many 
+        instances where people are interested to donate books to the libraries but the libraries where they are contacting are unable 
+        to receive the books due to their acquisition policies or may be due to lack of space.
+        Sometimes, many old books are sold at very less price to the persons who come home to receive used items. Many libraries also 
+        weed out books due to lack of space which are still in good condition. On the contrary, there are many instances, where people 
+        do not have money to procure books and many libraries also run out of budget and can’t procure books. Many people are interested 
+        in reading but due to lack of money they cannot read. Many NGOs are existing which runs programmes like Donate-A-Book. But under 
+        the programme, they collect money and with the money books are procured. But there should be some mechanism which will make use 
+        of the available books rather than procuring new books as a part of helping needy people. The donated money may be then used 
+        somewhere else for the development. This effort may also help to find out sources of donor who wants to donate text books of their 
+        children after they pass out to some needy students.
+    </p>
+</div>
+
+<div class="container my-5 text-center">
+    <?php
+        $sql = "SELECT SUM(quantity) FROM books WHERE pickedup = 'yes'";
+        $result_sum = mysqli_query($conn, $sql);
+        $sum = mysqli_fetch_assoc($result_sum);
+        echo '<p class="py-5"><span class="h1 text-white font-weight-bold">'.$sum['SUM(quantity)'].'</span><span class="h3"> Books have been donated by our DONOR so far.</p>';
+    ?>
 </div>
 
 <!-- books  -->
@@ -72,7 +171,7 @@
     <?php
         $cat = "education";
         $result = select_by_category($cat);
-        if(mysqli_num_rows($result)){
+        if(mysqli_num_rows($result)>0){
             echo '<a href="./search/?search=education" class="text-dark mt-5"><h2 class="shadow">Educational Books >></h2></a>
                 <div class="row pb-5 bookrow">';
             while($row = mysqli_fetch_assoc($result)){
@@ -100,7 +199,7 @@
     <?php
         $cat = "novel";
         $result = select_by_category($cat);
-        if(mysqli_num_rows($result)){
+        if(mysqli_num_rows($result)>0){
             echo '<a href="./search/?search=novel" class="text-dark mt-5"><h2  class="shadow">Novels >></h2></a>
             <div class="row pb-5 bookrow">';
             while($row = mysqli_fetch_assoc($result)){
@@ -128,7 +227,7 @@
     <?php
         $cat = "magazine";
         $result = select_by_category($cat);
-        if(mysqli_num_rows($result)){
+        if(mysqli_num_rows($result)>0){
             echo '<a href="./search/?search=magazine" class="text-dark mt-5"><h2 class="shadow">Magazines >></h2></a>
             <div class="row pb-5 bookrow">';
             while($row = mysqli_fetch_assoc($result)){
@@ -156,7 +255,7 @@
     <?php
         $cat = "story book";
         $result = select_by_category($cat);
-        if(mysqli_num_rows($result)){
+        if(mysqli_num_rows($result)>0){
             echo '<a href="./search/?search=story book" class="text-dark mt-5"><h2 class="shadow">Story Books >></h2></a>
             <div class="row pb-5 bookrow">';
             while($row = mysqli_fetch_assoc($result)){
@@ -184,7 +283,7 @@
     <?php
         $cat = "others";
         $result = select_by_category($cat);
-        if(mysqli_num_rows($result)){
+        if(mysqli_num_rows($result)>0){
             echo '<a href="./search/?search=others" class="text-dark mt-5"><h2 class="shadow">Other Books >></h2></a>
             <div class="row pb-5 bookrow">';
             while($row = mysqli_fetch_assoc($result)){
@@ -248,4 +347,5 @@
         </div>
     </div>
 </div>
+
 <?php include_once('./footer.php') ?>

@@ -39,9 +39,11 @@
 }
 
 #carousel1{
-    border: 15px double rgb(63, 4, 4);
     height: 20rem;
-    background-image: linear-gradient(rgb(92, 250, 184), orange);
+    background-image: url(../image/carousel.png), url(../image/book\ balance.gif);
+    background-position: left, right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 70%, 20%;
 }
 
 #carousel2{
@@ -66,7 +68,7 @@
 }
 
 .bg-black{
-    background-image: linear-gradient(145deg, rgba(34, 32, 48, 0.082), rgba(14, 14, 15, 0.89));
+    background-image: linear-gradient(225deg, rgba(34, 32, 48, 0.082), rgba(14, 14, 15, 0.89));
 }
 
 .bg-black-ltor{

@@ -143,12 +143,11 @@
 
 <script type="text/javascript">
     function changeHandler(){
-          const search = $('#srch').text();
-          const clss = $('#class').val();
-          const subject = $('#subject').val();
-          const year = $('#year').val();
-          const category = $('#category').val();
-        console.log("class:- ",search)
+        const search = $('#srch').text();
+        const clss = $('#class').val();
+        const subject = $('#subject').val();
+        const year = $('#year').val();
+        const category = $('#category').val();
         $.ajax({
             url: 'filter.php',
             type: 'POST',

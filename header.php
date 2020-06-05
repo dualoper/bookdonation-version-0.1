@@ -43,14 +43,14 @@
 							// password error 
                 else{
 					$err['password'] = '<span class="text-danger">Enter Correct Password</span>';
-					echo "<script>alert('incorrect password')</script>";
+					echo "<script>alert('Incorrect password')</script>";
                 }
             }
 		}
 							// email error 
         else{
 			$err['email'] = '<span class="text-danger">Invalid email</span>';
-			echo "<script>alert('invalid email')</script>";
+			echo "<script>alert('Invalid Email')</script>";
         }
     }
 ?>

@@ -73,7 +73,7 @@
             }
                             // else error 
             else{
-                echo mysqli_error($conn);
+                echo "<script>alert('This email is taken by another account. Try another email id.')</script>";
             }
         }
 
@@ -93,15 +93,15 @@
     <div class="col-md-7 bg-orange shadow-blue p-5 w3-animate-zoom" id="signupdiv">
         <h1 class="text-center text-white font-weight-bold mb-5">We are happy to have you here!</h1>
         <h1 class="text-primary text-center mb-4">CREATE ACCOUNT</h1>
-        <form action="" method="post" class="" enctype="multipart/form-data">
+        <form action="" method="post" class="" onsubmit="checkSpace()" id="signup" enctype="multipart/form-data">
             
             <!-- name -->
             <div class="form-row">
                 <div class="col-md mb-4 from-group">
-                    <input type="text" name="f_name" id="f_name" class="form-control col" placeholder="First Name" required>
+                    <input type="text" name="f_name" id="f_name" class="form-control col" placeholder="First Name" onkeyup="fName(this.value)" required>
                 </div>
                 <div class="col-md mb-4 from-group">
-                    <input type="text" name="l_name" id="l_name" class="form-control col" placeholder="Last Name">
+                    <input type="text" name="l_name" id="l_name" class="form-control col" placeholder="Last Name" onkeyup="lName(this.value)">
                 </div>
             </div>
 
@@ -123,15 +123,14 @@
                 </div>
                 <div class="col-md mb-4 from-group">
                     <label for="dob">Date Of Birth</label>
-                    <input type="date" name="dob" id="dob" class="form-control col" placeholder="First Name">
+                    <input type="date" name="dob" id="dob" class="form-control col" min="1930-01-01" max="2010-12-31" placeholder="First Name">
                 </div>
             </div>
 
             <!-- phone and occupation -->
             <div class="form-row">
                 <div class="col-md mb-4 from-group">
-                    <input type="text" name="phone" id="phone" onkeyup="checkphone(this.value)" class="form-control col" placeholder="Mobile NO." required>
-                    <span id="perr"></span>
+                    <input type="text" name="phone" id="phone" pattern="[6-9]{1}[0-9]{9}" title="Enter Valid Mobile No." class="form-control col" placeholder="Mobile NO." required>
                 </div>
                 <div class="col-md mb-4 from-group">
                     <select class="form-control" id="occupation" name="occupation">
@@ -194,13 +193,12 @@
                     </select>
                 </div>
                 <div class="col-md mb-4 from-group">
-                    <input type="text" name="pin" id="pin" class="form-control col" placeholder="Pin No.">
+                    <input type="text" name="pin" id="pin" pattern="[0-9]{6}" title="Enter 6 digit pin no." class="form-control col" placeholder="Pin No.">
                 </div>
             </div>
 
             <!-- email and password -->
             <input type="email" name="email" id="email" onkeyup="checkemail(this.value)" class="form-control mb-4" placeholder="E-mail" required>
-            <span id="emerr"></span>
             <input type="password" name="password" id="password" class="form-control mb-4" placeholder="Password" required>
 
             <!-- profile picture  -->
@@ -255,37 +253,10 @@
 <?php include_once('../footer.php'); ?>
 
 <script>
-    function checkphone(ph) {
-        if (ph.length == 0) {
-            document.getElementById("perr").innerHTML = "";
-            return;
-        }
-        else {
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("perr").innerHTML = this.responseText;
-                }
-            };
-            xmlhttp.open("GET", "gethint.php?ph=" + ph, true);
-            xmlhttp.send();
-        }
+    function fName(str){
+        document.getElementById("f_name").value = str.trim();
     }
-
-    function checkemail(em) {
-        if (em.length == 0) {
-            document.getElementById("emerr").innerHTML = "";
-            return;
-        }
-        else{
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("emerr").innerHTML = this.responseText;
-                }
-            };
-            xmlhttp.open("GET", "gethint.php?em=" + em, true);
-            xmlhttp.send();
-        }
+    function lName(str){
+        document.getElementById("l_name").value = str.trim();
     }
 </script>
